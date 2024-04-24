@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+<h1>Employee List</h1>
+
+{% if employees %}
+<table border="3">
+    <thead>
+    <th>Employee Number</th>
+    <th>Employee Name</th>
+    <th>Employee Salary</th>
+    <th>Employee Address</th>
+    </thead>
+    {% for employee in employees %}
+    <tr>
+        <td>{{ employee.employee_no }}</td>
+        <td>{{ employee.employee_name }}</td>
+        <td>{{ employee_salary }}</td>
+        <td>{{ employee.employee_address }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No Employee Records found!!</p>
+{% endif %}
+
